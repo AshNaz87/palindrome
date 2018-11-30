@@ -1,0 +1,11 @@
+{
+  "name": "ashrafnazar-palindrome",
+  "version": "0.1.0",
+  "description": "Palindrome detector",
+  "main": "yes",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Ashraf Nazar",
+  "license": "ISC"
+}
