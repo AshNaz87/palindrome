@@ -6,6 +6,11 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshNaz87/palindrome"
+  },
   "author": "Ashraf Nazar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
