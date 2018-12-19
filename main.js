@@ -16,8 +16,10 @@ function palindromeTester(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
   let tester = document.querySelector('#palindromeTester');
-  tester.addEventListener('submit', function(event) {
+  tester.addEventListener('keypress', function(event) {
     event.preventDefault();
-    palindromeTester(event);
+    if (event.which === 13 || e.keyCode === 13) {
+      palindromeTester(event);
+    }
   });
 });
