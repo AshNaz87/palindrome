@@ -10,12 +10,6 @@ String.prototype.blank = function() {
   return this.length === 0 || /^\s+|$\s+/gm.test(this);
 }
 
-// Returns the last element in an array
-
-Array.prototype.last = function() {
-  return this[this.length - 1];
-}
-
 function Phrase(content) {
   this.content = content;
 

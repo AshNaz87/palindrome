@@ -1,9 +1,16 @@
 #!/usr/local/bin/node
 
 let fs = require('fs');
-let Phrase = require('AshNaz87-palindrome');
+
+let Phrase = require('./index.js');
 
 let text = fs.readFileSync('phrases.txt', 'utf-8');
-text.split('\n').forEach(function(line) {
+
+let palindromes = text.split('\n').map(function(line) {
   let phrase = new Phrase(line);
-})
+  if (phrase.palindrome()) {
+    return `palindrome detected: ${line}`;
+  }
+}).join('\n');
+
+fs.writeFileSync('palindromes.txt', palindromes);

@@ -12,5 +12,8 @@
   },
   "author": "Ashraf Nazar",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "jsdom": "^13.1.0",
+    "request": "^2.88.0"
+  }
 }
