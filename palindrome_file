@@ -6,10 +6,10 @@ let Phrase = require('./index.js');
 
 let text = fs.readFileSync('phrases.txt', 'utf-8');
 
-let palindromes = text.split('\n').map(function(line) {
+let palindromes = text.split('\n').map(line => {
   let phrase = new Phrase(line);
   if (phrase.palindrome()) {
-    return `palindrome detected: ${line}`;
+    console.log(`palindrome detected: ${line}`);
   }
 }).join('\n');
 

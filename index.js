@@ -43,5 +43,4 @@ function TranslatedPhrase(content, translation) {
   }
 }
 
-
 TranslatedPhrase.prototype = new Phrase();
