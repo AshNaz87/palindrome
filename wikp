@@ -6,15 +6,11 @@ let request = require('request');
 let url = process.argv[2];
 
 const jsdom = require('jsdom');
-const {
-  JSDOM
-} = jsdom;
+const { JSDOM } = jsdom;
 
 request(url, function (error, response, body) {
   // Simulate a Document Object Model.
-  let {
-    document
-  } = (new JSDOM(body)).window;
+  let { document } = (new JSDOM(body)).window;
 
   // Grab all the paragraphs and references.
   let paragraphs = document.querySelectorAll('p');

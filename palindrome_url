@@ -5,10 +5,20 @@ let Phrase = require('./index');
 let url = 'https://cdn.learnenough.com/phrases.txt';
 
 request(url, function (error, response, body) {
-  body.split('\n').forEach(function(line) {
+  body.split('\n').forEach(line => {
     phrase = new Phrase(line);
     if (phrase.palindrome()) {
       console.log(`palindrome detected: ${line}`);
     }
   });
 });
+
+// request(url, function(error, response, body) {
+//   let lines = body.split('\n');
+//   let palindromes = lines.filter(line => {
+//     phrase = new Phrase(line);
+//     return phrase.palindrome();
+//   });
+
+//   palindromes.forEach(palindrome => console.log(`palindrome detected: ${palindrome}`));
+// });
